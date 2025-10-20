@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+
+  <main>
+    <div class="base_apparel-container">
+
+      <nav>
+        <img src="images/logo.svg" alt="logo" class="logo">
+      </nav>
+
+      <img src="images/hero-mobile.jpg" alt="hero-mobile" class="hero_mobile">
+      <img src="images/hero-desktop.jpg" alt="hero-desktop" class="hero_desktop">
+      <img src="images/bg-pattern-desktop.svg" alt="bg-pattern-desktop" class="bg_pattern">
+
+      <div class="content">
+        <h1 class="title"> 
+          <span class="title-text cl-red"> We're </span>
+          <span class="title-text cl-gray"> coming </span>
+          <span class="title-text cl-gray"> soon </span>
+        </h1>
+        <p class="description">
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        
+        <form id="emailForm" class="email-form" novalidate>
+          <input class="email" type="email" name="email" id="email" placeholder="Email Address">
+          <p class="error-msg">Please provide a valid email</p>
+          <img src="images/icon-error.svg" alt="icon-error" class="error-icon">
+          <button type="submit" class="btn" id="submitBtn">
+            <img src="images/icon-arrow.svg" alt="icon-arrow" class="submit-arrow">
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://@github.com/Coder-Rabbi" target="_blank">CODER RABBI</a>.
+    </p>
+  </footer>
+
+  <script src="script/script.js"></script>
+
+
+
+</body>
+</html>

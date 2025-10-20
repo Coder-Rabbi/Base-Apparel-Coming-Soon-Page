@@ -1,0 +1,175 @@
+:root{
+    --pink400: hsl(0, 36%, 70%);
+    --red500: hsl(0, 93%, 68%);
+    --gray900: hsl(0, 6%, 24%);  
+    --main-bg-gradients: hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+    --button-gradients: hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+    --fFamily: "Josefin Sans", sans-serif;
+    --fwLite: 300;
+    --fwRegular: 400;
+    --fwSemiBold: 600;
+}
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    overflow-y: auto;
+    background:linear-gradient(to bottom, var(--main-bg-gradients));
+    font-family: var(--fFamily);
+    scroll-behavior: smooth;
+}
+nav{
+    padding: 1.5rem;
+}
+.logo{
+    height: 2.375rem;
+    width: fit-content;
+}
+.hero_desktop,.bg_pattern{
+    display: none;
+}
+.hero_mobile{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    text-align: center;
+    padding: 3rem 1.5rem 0 1.5rem;
+}
+.title{
+    text-transform: uppercase;
+    letter-spacing: 0.438rem;
+}
+.title-text{
+    display: block;
+}
+.cl-red{
+    font-weight: var(--fwLite);
+    color: var(--pink400);
+}
+.cl-gray{
+    color: var(--gray900);
+}
+.description{
+    padding-block: 1.5rem;
+    line-height: 1.35;
+}
+.email,.description,.cl-gray{
+    font-weight: var(--fwSemiBold);
+}
+.description,
+.email::placeholder,
+.error-msg{
+    font-size: 0.875rem;
+}
+.description,
+.email::placeholder{
+    color: var(--pink400);
+}
+.email-form{
+    position: relative;
+}
+.email,.btn{
+    height: 3.125rem;
+    border-radius: 1.563rem;
+}
+.email{
+    width: 100%;
+    padding: 0.938rem 7.188rem 0.938rem 1.563rem;
+    border: 1px solid var(--pink400);
+    background-color: transparent;
+    color: var(--gray900);
+    font-size: 0.938rem;
+}
+.email:focus{
+    outline: none;
+}
+.email,.email::placeholder{
+    font-family: var(--fFamily);
+}
+.email::placeholder,.error-msg{
+    font-weight: var(--fwRegular);
+}
+.error-icon{
+    position: absolute;
+    right: 5rem;
+    top: 1.563rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.email.email-error{
+    border-color: var(--red500);
+}
+.email.email-error+.error-msg+.error-icon{
+    opacity: 1;
+}
+.error-msg{
+    text-align: left;
+    padding: 0.625rem 1.563rem;
+    color: var(--red500);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.email.email-error+.error-msg{
+    opacity: 1;
+}
+.btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--button-gradients));
+    box-shadow: 0 0.625rem 1.25rem var(--pink400);
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+/* Desktop hover */
+@media (hover: hover) {
+    .btn:hover{
+        background:linear-gradient(hsl(0, 80%, 86%));
+        transform: scale(1.05);
+    }   
+}
+/* Mobile active  */
+@media (hover: none) {
+    .btn:active{
+        transform: scale(0.97);
+        opacity: 0.9;
+    }  
+}
+.attribution {
+    font-size: 0.6rem; 
+    text-align: center; 
+    text-transform: uppercase;
+    padding-block: 1rem;
+    font-weight: var(--fwSemiBold);
+    color: var(--gray900);
+    padding-inline: 3rem;
+}
+.attribution a {
+    color: var(--red500);
+    text-decoration: none;
+}
+
+/* Remove transition  */
+@media (prefers-reduced-motion:reduce) {
+    body{
+        scroll-behavior: auto;
+    }
+    .error-icon,.error-msg,.btn{
+        transition: none;
+    }   
+}
+
+

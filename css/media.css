@@ -1,0 +1,84 @@
+@media screen and (min-width: 450px) {
+    .base_apparel-container{
+        width: 28.125rem;
+        margin: 0 auto;
+    }
+    nav{
+        padding-inline: 0;
+    }
+}
+
+@media screen and (min-width: 850px){
+    .base_apparel-container{
+        width: 60vw;
+        height: 100vh;
+        margin: unset;
+        padding-inline: 10vw;
+    }
+    .bg_pattern{
+        display: block;
+        position: absolute;
+        width: 60vw;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+    .logo{
+        width: auto;
+        height: auto;
+    }
+    nav{
+        padding: 10vh 0 0 0;
+    }
+    .hero_mobile{
+        display: none;
+    }
+    .hero_desktop{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 40vw;
+        object-fit: cover;
+    }
+    .content{
+        padding: 0;
+        text-align: left;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    .title{
+        font-size: 3.125rem;
+    }
+    .description{
+        font-size: 1rem;
+        font-weight: var(--fwRegular);
+        line-height: 1.5;
+    }
+    .attribution{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 75rem){
+    .base_apparel-container{
+        padding-inline: 15vw;
+    }
+    .title{
+        font-size: 3.75rem;
+    }
+    .description{
+        padding-block: 2rem;
+    }
+}
+
+@media screen and (min-width: 90rem){
+    .content,.email{
+        width: 28.125rem;
+    }
+    
+}
+
