@@ -134,18 +134,12 @@ nav{
     box-shadow: 0 0.625rem 1.25rem var(--pink400);
     transition: background 0.4s ease, transform 0.3s ease;
 }
-/* Desktop hover */
-@media (hover: hover) {
-    .btn:hover{
-        background:linear-gradient(hsl(0, 80%, 86%));
-        transform: scale(1.05);
-    }   
-}
 /* Mobile active  */
 @media (hover: none) {
     .btn:active{
         transform: scale(0.97);
         opacity: 0.9;
+        -webkit-tap-highlight-color: transparent;
     }  
 }
 .attribution {

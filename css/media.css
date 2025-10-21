@@ -58,6 +58,14 @@
         font-weight: var(--fwRegular);
         line-height: 1.5;
     }
+
+    /* Desktop button hover */
+    @media (hover: hover) {
+    .btn:hover{
+        background:linear-gradient(hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+        transform: scale(1.05);
+    }  
+}
     .attribution{
         display: none;
     }
@@ -78,7 +86,5 @@
 @media screen and (min-width: 90rem){
     .content,.email{
         width: 28.125rem;
-    }
-    
+    }  
 }
-
